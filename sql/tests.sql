@@ -107,3 +107,11 @@ select alpha.alpha_id,
   from alpha
   left join beta
     on (alpha.alpha_id = beta.alpha_id)
+
+
+
+CREATE INDEX idx_alpha_created_at ON alpha(created_at);
+CREATE INDEX idx_beta_created_at ON beta(created_at);
+CREATE INDEX idx_alpha_alpha_id ON alpha(alpha_id);
+CREATE INDEX idx_beta_alpha_id ON beta(alpha_id);
+create index idx_beta_beta_id on beta(beta_id);
