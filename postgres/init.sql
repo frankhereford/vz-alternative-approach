@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS alpha (
+  id SERIAL PRIMARY KEY,
+  alpha_id integer NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS beta (
+  id SERIAL PRIMARY KEY,
+  beta_id integer NOT NULL,
+  alpha_id integer NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
